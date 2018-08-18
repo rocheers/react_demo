@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Space+Mono");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.voter-component .voter-container {
+  margin: 0 auto;
+  width: 500px;
+  position: relative;
+}
+.voter-component .voter-input {
+  display: block;
+  margin: 2px 0;
+  font-size: 16px;
+  width: 85px;
+  transition: width 1s ease-out;
+}
+.voter-component .voter-input:focus {
+  width: 180px;
+}
+.voter-component .voter-btn {
+  width: 100px;
+  height: 25px;
+  border-radius: 7px;
+  box-shadow: 0px 3px 5px grey;
+  font-size: 14px;
+  position: absolute;
+  top: 15px;
+  right: 40%;
+}
+.voter-component .voter-btn:active {
+  background: lightblue;
+}
+.voter-component .voter-btn:hover {
+  cursor: pointer;
+}
+.voter-component .voter-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.voter-component .voter-list .voter-list-item {
+  display: flex;
+  position: relative;
+  min-height: 80px;
+}
+.voter-component .voter-list .voter-list-item .item-left {
+  flex-basis: 33%;
+  align-self: center;
+  text-align: center;
+  flex-grow: 0;
+}
+.voter-component .voter-list .voter-list-item .item-left i {
+  margin: 0 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.voter-component .voter-list .voter-list-item .item-left span {
+  font-family: "Space Mono", monospace;
+  margin: 0 2px;
+  font-size: 1.5em;
+}
+.voter-component .voter-list .voter-list-item .item-right {
+  flex-basis: 67%;
+}
+.voter-component .voter-list .voter-list-item .item-right h3 {
+  text-transform: capitalize;
+}
+.voter-component .voter-list .voter-list-item .item-right p {
+  margin-left: 10px;
+}
+.voter-component .voter-list hr {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+.home nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.home nav ul li {
+  display: inline-block;
+  border: solid 2px steelblue;
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 10px;
+  transition: background 0.2s, color 0.2s;
+}
+.home nav ul li:hover {
+  background: steelblue;
+}
+.home nav ul li:hover .link {
+  color: white;
+}
+.home nav ul li .link {
+  text-decoration: none;
+  font-size: 20px;
+}
+.home section {
+  margin: 0;
+  padding: 0;
+}
+
+.tag-component {
+  /* Add your css styles here */
+}
+.tag-component .tag-container {
+  display: flex;
+  border-bottom: solid 2px black;
+  margin: 10px;
+  padding: 5px;
+}
+.tag-component .tag-container .tag {
+  margin: 5px;
+  border: solid 1px;
+  border-radius: 10px;
+  min-width: 40px;
+  text-align: center;
+  background-color: #ddd;
+  opacity: 0.7;
+  box-shadow: #ddd 2px 3px 2px;
+}
+.tag-component .tag-container .tag:hover {
+  opacity: 1;
+}
+.tag-component .tag-container .tag span {
+  font-size: 20px;
+  margin: 5px 4px 5px 8px;
+}
+.tag-component .tag-container .tag i {
+  text-decoration: none;
+  padding: 0 2px;
+  margin: 5px 8px 5px 4px;
+}
+.tag-component .tag-container .tag i:hover {
+  cursor: pointer;
+  color: red;
+}
+.tag-component .tag-container .tag-input {
+  border: none;
+  font-size: 16px;
+}
+.tag-component .tag-container .tag-input:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=main.css.map */
