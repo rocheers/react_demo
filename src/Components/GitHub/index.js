@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 
-const List = (props) => {
+const List = props => {
   const imageStyle = { width: 50, height: 50 };
   return (
     <tr>
@@ -18,7 +18,7 @@ const List = (props) => {
   );
 };
 
-const PerPage = (props) => {
+const PerPage = props => {
   if ('name' in props.user) {
     return (
       <div className="one">
@@ -27,7 +27,7 @@ const PerPage = (props) => {
         <p>Location: {props.user.location}</p>
         <p>Repositories:</p>
         <ul>
-          {props.repos.slice(0, 10).map((repo) => {
+          {props.repos.slice(0, 10).map(repo => {
             return (
               <li key={repo.id}>
                 <a href={repo.html_url}>{repo.name}</a>
@@ -49,30 +49,30 @@ class GithubPage extends Component {
     this.state = {
       allUser: [],
       user: {},
-      repos: []
+      repos: [],
     };
   }
 
   componentDidMount() {
     axios
       .get('https://api.github.com/users?per_page=100')
-      .then((response) => {
+      .then(response => {
         this.setState({ allUser: response.data });
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
       });
   }
 
-  showOneUser = (id) => (event) => {
+  showOneUser = id => event => {
     axios
       .get(this.state.allUser[id].url)
-      .then((res) => this.setState({ user: res.data }))
-      .catch((err) => console.log(err));
+      .then(res => this.setState({ user: res.data }))
+      .catch(err => console.log(err));
     axios
       .get(this.state.allUser[id].repos_url)
-      .then((res) => this.setState({ repos: res.data }))
-      .catch((err) => console.log(err));
+      .then(res => this.setState({ repos: res.data }))
+      .catch(err => console.log(err));
   };
 
   render() {

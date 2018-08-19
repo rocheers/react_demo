@@ -5,7 +5,7 @@ import {
   Link,
   Switch,
   withRouter,
-  Redirect
+  Redirect,
 } from 'react-router-dom';
 import axios from 'axios';
 import Login from './Login';
@@ -16,7 +16,7 @@ import { loadState, saveState, removeState } from './LocalStorage';
 import './App.css';
 
 // transfer today to target string of numbers
-const getPass = (mydate) => {
+const getPass = mydate => {
   let temp = '';
   temp =
     mydate.getFullYear().toString() +
@@ -32,7 +32,7 @@ const getPass = (mydate) => {
 const today = new Date();
 const pwd = getPass(today);
 
-const Home = (props) => {
+const Home = props => {
   if (!props.authenticated) {
     return <Redirect to={{ pathname: '/login' }} />;
   }
@@ -51,7 +51,7 @@ const Home = (props) => {
   );
 };
 
-const Button = (props) => {
+const Button = props => {
   return (
     <button
       onClick={() => {
@@ -72,30 +72,30 @@ class QuestionPage extends Component {
       textUname: '',
       textPwd: '',
       title: [],
-      authenticated: false
+      authenticated: false,
     };
   }
 
   componentDidMount() {
     axios
       .get('http://api.haochuan.io/oj/problems')
-      .then((res) => {
+      .then(res => {
         console.log(res);
         this.setState({ title: res.data.questions });
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
         alert('Cannot reach server');
       });
     loadState();
   }
 
-  handleUnameChange = (e) => {
+  handleUnameChange = e => {
     this.setState({ textUname: e.target.value });
     console.log(this.state.textUname);
   };
 
-  handlePwdChange = (e) => {
+  handlePwdChange = e => {
     this.setState({ textPwd: e.target.value });
     console.log(this.state.textPwd);
   };
@@ -104,15 +104,15 @@ class QuestionPage extends Component {
     axios
       .post('http://api.haochuan.io/login', {
         username: this.state.textUname,
-        password: this.state.textPwd
+        password: this.state.textPwd,
       })
-      .then((res) => {
+      .then(res => {
         console.log(res);
         if (res.data.username === 'today' && res.data.password === pwd) {
           this.setState({
             authenticated: true,
             textUname: '',
-            textPwd: ''
+            textPwd: '',
           });
           saveState(this.state.authenticated);
         } else if (res.username === 'today') {
@@ -121,7 +121,7 @@ class QuestionPage extends Component {
           alert('Username and Password are not matched!');
         }
       })
-      .catch((err) => {
+      .catch(err => {
         console.log('err');
       });
 
@@ -182,7 +182,7 @@ class QuestionPage extends Component {
 
             <Route
               path="/problems/:id"
-              render={(props) => (
+              render={props => (
                 <div>
                   <PerQuestion
                     url={

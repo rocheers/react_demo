@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Tag = (props) => {
+const Tag = props => {
   return (
     <div className="tag">
       <span>{props.title}</span>
-      <i class="fas fa-times" onClick={() => props.remove(props.idx)} />
+      <i className="fas fa-times" onClick={() => props.remove(props.idx)} />
     </div>
   );
 };
@@ -14,21 +14,21 @@ class TagPage extends React.Component {
     super(props);
     this.state = {
       tags: [1, 2, 3],
-      inputStr: ''
+      inputStr: '',
     };
   }
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({ inputStr: event.target.value });
   };
 
-  handleKeyDown = (event) => {
+  handleKeyDown = event => {
     if (event.keyCode === 13) {
       if (!this.state.tags.includes(this.state.inputStr)) {
-        this.setState((prevState) => {
+        this.setState(prevState => {
           return {
             tags: [...prevState.tags, this.state.inputStr],
-            inputStr: ''
+            inputStr: '',
           };
         });
       } else {
@@ -42,10 +42,10 @@ class TagPage extends React.Component {
     }
   };
 
-  handleRemove = (id) => {
-    this.setState((prevState) => {
+  handleRemove = id => {
+    this.setState(prevState => {
       return {
-        tags: prevState.tags.filter((val, idx) => idx !== id)
+        tags: prevState.tags.filter((val, idx) => idx !== id),
       };
     });
   };

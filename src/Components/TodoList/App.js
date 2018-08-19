@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const ToDoItem = (props) => {
+const ToDoItem = props => {
   return (
     <li>
       <span>{props.name}</span>
@@ -17,22 +17,22 @@ class App extends Component {
     super(props);
     this.state = { textInput: '', authenticated: 'all', checkInfo: [] };
   }
-  handleInputChange = (e) => {
+  handleInputChange = e => {
     this.setState({
-      textInput: e.target.value
+      textInput: e.target.value,
     });
 
     console.log(e.target.value);
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     let pendingItem = {
       name: this.state.textInput,
-      checked: false
+      checked: false,
     };
     this.setState({
       checkInfo: [...this.state.checkInfo, pendingItem],
-      textInput: ''
+      textInput: '',
     });
   };
 
@@ -48,7 +48,7 @@ class App extends Component {
     this.setState({ authenticated: 'complete' });
   };
 
-  clickedFunc = (id) => {
+  clickedFunc = id => {
     let clickable = this.state.checkInfo.map((record, index) => {
       if (id === index) {
         return { ...record, checked: !record.checked };
@@ -75,7 +75,7 @@ class App extends Component {
           <ul>
             {this.state.authenticated === 'complete'
               ? this.state.checkInfo
-                  .filter((record) => record.checked === true)
+                  .filter(record => record.checked === true)
                   .map((record, index) => {
                     return (
                       <ToDoItem
@@ -88,7 +88,7 @@ class App extends Component {
                   })
               : this.state.authenticated === 'active'
                 ? this.state.checkInfo
-                    .filter((record) => record.checked === false)
+                    .filter(record => record.checked === false)
                     .map((record, index) => {
                       return (
                         <ToDoItem

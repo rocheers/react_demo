@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const Sent = () => {
-    return <p>Nothing in Sent Folder!</p>;
+  return <p>Nothing in Sent Folder!</p>;
 };
 
 export default Sent;

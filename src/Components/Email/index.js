@@ -14,18 +14,18 @@ class EmailPage extends Component {
       inboxData: [],
       trashData: [],
       tempData: [],
-      authenticated: 0
+      authenticated: 0,
     };
   }
 
   componentDidMount = () => {
     axios
       .get('http://api.haochuan.io/emails')
-      .then((res) => {
+      .then(res => {
         console.log(res);
         this.setState({ inboxData: res.data.emailData });
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
         alert(err);
       });
@@ -45,22 +45,22 @@ class EmailPage extends Component {
     this.setState({ authenticated: 3 });
   };
 
-  handleDel = (id) => {
+  handleDel = id => {
     this.setState({
       inboxData: [
         ...this.state.inboxData.slice(0, id),
-        ...this.state.inboxData.slice(id + 1)
+        ...this.state.inboxData.slice(id + 1),
       ],
       trashData: [...this.state.trashData, this.state.inboxData[id]],
-      tempData: []
+      tempData: [],
     });
     console.log(this.state.trashData);
   };
 
-  showOneEmail = (id) => {
+  showOneEmail = id => {
     let temp = {
       ...this.state.inboxData[id],
-      index: id
+      index: id,
     };
     this.setState({ tempData: temp });
     console.log(temp);
@@ -74,7 +74,7 @@ class EmailPage extends Component {
           style={{
             flexGrow: '1',
             backgroundColor: 'black',
-            color: 'white'
+            color: 'white',
           }}
         >
           <div className="btnhead">

@@ -12,24 +12,24 @@ class VoterPage extends Component {
           title: 'test',
           desc: 'haha',
           countPositive: 25,
-          countNegative: 12
+          countNegative: 12,
         },
         {
           title: 'another',
           desc: 'hoho',
           countPositive: 1,
-          countNegative: 7
-        }
-      ]
+          countNegative: 7,
+        },
+      ],
     };
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     let name = e.target.name;
     this.setState({ [name]: e.target.value });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     if (!this.state.title || !this.state.desc) {
       return;
     }
@@ -37,16 +37,16 @@ class VoterPage extends Component {
       title: this.state.title,
       desc: this.state.desc,
       countPositive: 0,
-      countNegative: 0
+      countNegative: 0,
     };
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       items: [...prevState.items, pendingItem],
       title: '',
-      desc: ''
+      desc: '',
     }));
   };
 
-  handleAdd = (id) => {
+  handleAdd = id => {
     let updatedItems = this.state.items.map((item, idx) => {
       if (idx === id) {
         return { ...item, countPositive: item.countPositive + 1 };
@@ -57,7 +57,7 @@ class VoterPage extends Component {
     this.setState({ items: updatedItems });
   };
 
-  handleMinus = (id) => {
+  handleMinus = id => {
     let updatedItems = this.state.items.map((item, idx) => {
       if (idx === id) {
         return { ...item, countNegative: item.countNegative + 1 };

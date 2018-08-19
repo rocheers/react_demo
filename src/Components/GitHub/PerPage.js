@@ -10,10 +10,10 @@ class PerPage extends Component {
     console.log(this.props.match);
     axios
       .get(`https://api.github.com/users/${this.props.match.params.login}`)
-      .then((res) => {
+      .then(res => {
         this.setState({ user: res.data });
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
       });
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const VoterItem = (props) => {
+const VoterItem = props => {
   return (
     <div>
       <li className="voter-list-item">
