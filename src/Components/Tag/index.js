@@ -14,7 +14,7 @@ class TagPage extends React.Component {
     super(props);
     this.state = {
       tags: [1, 2, 3],
-      inputStr: '',
+      inputStr: ''
     };
   }
 
@@ -28,7 +28,7 @@ class TagPage extends React.Component {
         this.setState(prevState => {
           return {
             tags: [...prevState.tags, this.state.inputStr],
-            inputStr: '',
+            inputStr: ''
           };
         });
       } else {
@@ -45,7 +45,7 @@ class TagPage extends React.Component {
   handleRemove = id => {
     this.setState(prevState => {
       return {
-        tags: prevState.tags.filter((val, idx) => idx !== id),
+        tags: prevState.tags.filter((val, idx) => idx !== id)
       };
     });
   };

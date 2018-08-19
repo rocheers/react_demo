@@ -12,15 +12,15 @@ class VoterPage extends Component {
           title: 'test',
           desc: 'haha',
           countPositive: 25,
-          countNegative: 12,
+          countNegative: 12
         },
         {
           title: 'another',
           desc: 'hoho',
           countPositive: 1,
-          countNegative: 7,
-        },
-      ],
+          countNegative: 7
+        }
+      ]
     };
   }
 
@@ -29,7 +29,7 @@ class VoterPage extends Component {
     this.setState({ [name]: e.target.value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = () => {
     if (!this.state.title || !this.state.desc) {
       return;
     }
@@ -37,12 +37,12 @@ class VoterPage extends Component {
       title: this.state.title,
       desc: this.state.desc,
       countPositive: 0,
-      countNegative: 0,
+      countNegative: 0
     };
     this.setState(prevState => ({
       items: [...prevState.items, pendingItem],
       title: '',
-      desc: '',
+      desc: ''
     }));
   };
 

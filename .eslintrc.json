@@ -1,4 +1,7 @@
 {
+  "env": {
+    "browser": true
+  },
   "parserOptions": {
     "ecmaVersion": 8,
     "sourceType": "module"
@@ -6,14 +9,18 @@
 
   "plugins": ["react", "prettier"],
 
-  "extends": ["last", "prettier/react", "plugin:react/recommended", "eslint:recommended"],
+  "extends": [
+    "last",
+    "prettier/react",
+    "plugin:react/recommended",
+    "eslint:recommended"
+  ],
 
   "rules": {
     "prettier/prettier": [
       "error",
       {
-        "singleQuote": true,
-        "trailingComma": "all"
+        "singleQuote": true
       }
     ],
     "eqeqeq": ["error", "always"],
@@ -28,15 +35,16 @@
     "react/no-did-update-set-state": "error",
     "react/no-unknown-property": "error",
     "react/no-unused-prop-types": "error",
-    "react/prop-types": "error",
-    "react/react-in-jsx-scope": "error"
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "error",
+    "no-console": "off"
   },
   "settings": {
     "react": {
-      "createClass": "createReactClass", 
+      "createClass": "createReactClass",
       "pragma": "React",
       "version": "16.0"
     },
-    "propWrapperFunctions": [ "forbidExtraProps" ]
+    "propWrapperFunctions": ["forbidExtraProps"]
   }
 }

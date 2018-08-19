@@ -19,20 +19,20 @@ class App extends Component {
   }
   handleInputChange = e => {
     this.setState({
-      textInput: e.target.value,
+      textInput: e.target.value
     });
 
     console.log(e.target.value);
   };
 
-  handleSubmit = e => {
+  handleSubmit = () => {
     let pendingItem = {
       name: this.state.textInput,
-      checked: false,
+      checked: false
     };
     this.setState({
       checkInfo: [...this.state.checkInfo, pendingItem],
-      textInput: '',
+      textInput: ''
     });
   };
 

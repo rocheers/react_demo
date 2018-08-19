@@ -49,7 +49,7 @@ class GithubPage extends Component {
     this.state = {
       allUser: [],
       user: {},
-      repos: [],
+      repos: []
     };
   }
 
@@ -64,7 +64,7 @@ class GithubPage extends Component {
       });
   }
 
-  showOneUser = id => event => {
+  showOneUser = id => () => {
     axios
       .get(this.state.allUser[id].url)
       .then(res => this.setState({ user: res.data }))

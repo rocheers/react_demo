@@ -5,7 +5,7 @@ import {
   Link,
   Switch,
   withRouter,
-  Redirect,
+  Redirect
 } from 'react-router-dom';
 import axios from 'axios';
 import Login from './Login';
@@ -72,7 +72,7 @@ class QuestionPage extends Component {
       textUname: '',
       textPwd: '',
       title: [],
-      authenticated: false,
+      authenticated: false
     };
   }
 
@@ -104,7 +104,7 @@ class QuestionPage extends Component {
     axios
       .post('http://api.haochuan.io/login', {
         username: this.state.textUname,
-        password: this.state.textPwd,
+        password: this.state.textPwd
       })
       .then(res => {
         console.log(res);
@@ -112,7 +112,7 @@ class QuestionPage extends Component {
           this.setState({
             authenticated: true,
             textUname: '',
-            textPwd: '',
+            textPwd: ''
           });
           saveState(this.state.authenticated);
         } else if (res.username === 'today') {
@@ -122,7 +122,7 @@ class QuestionPage extends Component {
         }
       })
       .catch(err => {
-        console.log('err');
+        console.log(err);
       });
 
     console.log(this.state.title);
