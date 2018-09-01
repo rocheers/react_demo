@@ -1,0 +1,126 @@
+.recipes-container {
+    clear: right;
+    display: flex;
+    // flex-basis: 33%;
+    // justify-content: space-around;
+    flex-wrap: wrap;
+    & .recipe-container {
+        width: 31%;
+        padding: 0.5em 1em;
+        position: relative;
+
+        & .card {
+            max-width: 300px;
+            margin: auto;
+
+            & .expand-btn {
+                margin-top: -10px;
+                margin-left: auto;
+                transition: transform 0.2s linear;
+            }
+
+            & .expanded {
+                transform: rotate(180deg);
+            }
+
+            & .unexpanded {
+                transform: rotate(0deg);
+            }
+        }
+
+        & .media {
+            height: 0;
+            padding-top: 56.25%;
+        }
+
+        & .del-btn {
+            position: absolute;
+            top: -2%;
+            right: 15%;
+        }
+
+        & .btn-hide {
+            opacity: 0;
+        }
+
+        & .btn-show {
+            opacity: 1;
+            transition: opacity 0.5s linear;
+        }
+    }
+}
+
+.new-recipe-container {
+    width: 30%;
+    margin: auto;
+
+    & .panel-details {
+        display: flex;
+        flex-direction: column;
+        margin: -10px 20px 20px 20px;
+
+        & > div {
+            // border: dashed 1px red;
+            margin: 10px 0;
+
+            &:last-child {
+                margin: 0 0 -20px;
+            }
+
+            & > div {
+                // border: dotted 1px blue;
+                width: 100%;
+            }
+        }
+
+        & .chips-container {
+            display: flex;
+            flex-wrap: wrap;
+
+            & .chips {
+                min-width: 60px;
+                margin: 5px 3px 0;
+            }
+        }
+
+        & > p {
+            margin-top: 25px;
+            margin-bottom: 0px;
+        }
+
+        & .btn-group {
+            text-align: right;
+            margin: 10px 0;
+        }
+
+        & .submit-btn {
+            text-align: center;
+        }
+
+        & .ing-container {
+            & p {
+                margin: 5px 0 -10px;
+            }
+
+            & .ing-list {
+                list-style: none;
+                & span {
+                    margin-left: -2em;
+                    margin-right: 1em;
+                }
+                & li {
+                    display: inline-block;
+                    width: 95%;
+                    margin-top: 5px;
+                    & > * {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.edit-btn {
+    float: right;
+}

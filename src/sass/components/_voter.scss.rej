@@ -1,0 +1,181 @@
+***************
+*** 1,89 ****
+  .voter-container {
+-   margin: 0 auto;
+-   width: 500px;
+-   // border: 2px dotted steelblue;
+-   position: relative;
+  }
+  
+  .voter-input {
+-   display: block;
+-   margin: 2px 0;
+-   font-size: 16px;
+-   width: 85px;
+-   transition: width 1s ease-out;
+- 
+-   &:focus {
+-     // background: lightpink;
+-     width: 180px;
+-   }
+  }
+  
+  .voter-btn {
+-   width: 100px;
+-   height: 25px;
+-   border-radius: 7px;
+-   // box-shadow: 0px 3px 5px grey;
+-   font-size: 14px;
+-   position: absolute;
+-   top: 15px;
+-   right: 40%;
+-   &:active {
+-     background: lightblue;
+-   }
+-   &:hover {
+-     cursor: pointer;
+-   }
+  }
+  
+  .voter-list {
+-   list-style: none;
+-   display: flex;
+-   flex-direction: column;
+-   margin: auto;
+- 
+-   & .voter-list-item {
+      display: flex;
+-     position: relative;
+-     min-height: 80px;
+-     // border: 2px solid;
+- 
+-     & .item-left {
+-       flex-basis: 33%;
+-       align-self: center;
+-       text-align: center;
+-       flex-grow: 0;
+-       // border: 1px dashed red;
+- 
+-       & i {
+-         margin: 0 5px;
+-         font-size: 18px;
+-         cursor: pointer;
+-       }
+  
+-       & span {
+-         font-family: 'Space Mono', monospace;
+-         margin: 0 2px;
+-         font-size: 1.5em;
+-       }
+      }
+  
+-     & .item-right {
+-       flex-basis: 67%;
+-       // border: 1px dashed blue;
+- 
+-       & h3 {
+-         text-transform: capitalize;
+-       }
+- 
+-       & p {
+-         margin-left: 10px;
+-       }
+      }
+-   }
+- 
+-   & hr {
+-     height: 12px;
+-     border: 0;
+-     box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+-   }
+- }
+--- 1,89 ----
+  .voter-container {
++     margin: 0 auto;
++     width: 500px;
++     // border: 2px dotted steelblue;
++     position: relative;
+  }
+  
+  .voter-input {
++     display: block;
++     margin: 2px 0;
++     font-size: 16px;
++     width: 85px;
++     transition: width 1s ease-out;
++ 
++     &:focus {
++         // background: lightpink;
++         width: 180px;
++     }
+  }
+  
+  .voter-btn {
++     width: 100px;
++     height: 25px;
++     border-radius: 7px;
++     box-shadow: 0px 3px 5px grey;
++     font-size: 14px;
++     position: absolute;
++     top: 15px;
++     right: 40%;
++     &:active {
++         background: lightblue;
++     }
++     &:hover {
++         cursor: pointer;
++     }
+  }
+  
+  .voter-list {
++     list-style: none;
+      display: flex;
++     flex-direction: column;
++     margin: auto;
+  
++     & .voter-list-item {
++         display: flex;
++         position: relative;
++         min-height: 80px;
++         // border: 2px solid;
++ 
++         & .item-left {
++             flex-basis: 33%;
++             align-self: center;
++             text-align: center;
++             flex-grow: 0;
++             // border: 1px dashed red;
++ 
++             & i {
++                 margin: 0 5px;
++                 font-size: 18px;
++                 cursor: pointer;
++             }
++ 
++             & span {
++                 font-family: 'Space Mono', monospace;
++                 margin: 0 2px;
++                 font-size: 1.5em;
++             }
++         }
++ 
++         & .item-right {
++             flex-basis: 67%;
++             // border: 1px dashed blue;
++ 
++             & h3 {
++                 text-transform: capitalize;
++             }
++ 
++             & p {
++                 margin-left: 10px;
++             }
++         }
+      }
+  
++     & hr {
++         height: 12px;
++         border: 0;
++         box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+      }
++ }

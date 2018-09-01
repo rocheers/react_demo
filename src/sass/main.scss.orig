@@ -5,17 +5,13 @@ body {
 }
 
 .voter-component {
-    @import 'components/voter';
+    @import "components/voter";
 }
 
 .home {
-    @import 'components/home';
+    @import "components/home";
 }
 
 .tag-component {
-    @import 'components/tag';
-}
-
-.recipe-component {
-    @import 'components/recipe';
+    @import "components/tag";
 }

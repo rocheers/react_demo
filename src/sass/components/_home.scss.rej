@@ -1,0 +1,11 @@
+***************
+*** 32,35 ****
+  section {
+      margin: 0;
+      padding: 0;
+- }
+--- 32,35 ----
+  section {
+      margin: 0;
+      padding: 0;
++ }

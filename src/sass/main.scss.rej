@@ -1,0 +1,33 @@
+***************
+*** 5,21 ****
+  }
+  
+  .voter-component {
+-     @import 'components/voter';
+  }
+  
+  .home {
+-     @import 'components/home';
+  }
+  
+  .tag-component {
+-     @import 'components/tag';
+- }
+- 
+- .recipe-component {
+-     @import 'components/recipe';
+- }
+--- 5,17 ----
+  }
+  
+  .voter-component {
++     @import "components/voter";
+  }
+  
+  .home {
++     @import "components/home";
+  }
+  
+  .tag-component {
++     @import "components/tag";
++ }

@@ -91,11 +91,7 @@ class VoterPage extends Component {
           <button className="voter-btn" onClick={this.handleSubmit}>
             Add
           </button>
-          <VoterList
-            items={this.state.items}
-            handleAdd={this.handleAdd}
-            handleMinus={this.handleMinus}
-          />
+          <VoterList items={this.state.items} handleAdd={this.handleAdd} handleMinus={this.handleMinus} />
         </div>
       </div>
     );

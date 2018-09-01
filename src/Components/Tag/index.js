@@ -4,7 +4,7 @@ const Tag = props => {
   return (
     <div className="tag">
       <span>{props.title}</span>
-      <i className="fas fa-times" onClick={() => props.remove(props.idx)} />
+      <i className="fa fa-times" onClick={() => props.remove(props.idx)} />
     </div>
   );
 };

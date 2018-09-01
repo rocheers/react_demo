@@ -5,15 +5,9 @@ const VoterItem = props => {
     <div>
       <li className="voter-list-item">
         <div className="item-left">
-          <i
-            className="fas fa-plus"
-            onClick={() => props.handleAdd(props.id)}
-          />
+          <i className="fa fa-plus" onClick={() => props.handleAdd(props.id)} />
           <span>{props.countPositive - props.countNegative}</span>
-          <i
-            className="fas fa-minus"
-            onClick={() => props.handleMinus(props.id)}
-          />
+          <i className="fa fa-minus" onClick={() => props.handleMinus(props.id)} />
         </div>
         <div className="item-right">
           <h3>{props.title}</h3>

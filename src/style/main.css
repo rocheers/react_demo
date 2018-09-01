@@ -22,7 +22,6 @@ body {
   width: 100px;
   height: 25px;
   border-radius: 7px;
-  box-shadow: 0px 3px 5px grey;
   font-size: 14px;
   position: absolute;
   top: 15px;
@@ -147,6 +146,106 @@ body {
 }
 .tag-component .tag-container .tag-input:focus {
   outline: none;
+}
+
+.recipe-component .recipes-container {
+  clear: right;
+  display: flex;
+  flex-wrap: wrap;
+}
+.recipe-component .recipes-container .recipe-container {
+  width: 31%;
+  padding: 0.5em 1em;
+  position: relative;
+}
+.recipe-component .recipes-container .recipe-container .card {
+  max-width: 300px;
+  margin: auto;
+}
+.recipe-component .recipes-container .recipe-container .card .expand-btn {
+  margin-top: -10px;
+  margin-left: auto;
+  transition: transform 0.2s linear;
+}
+.recipe-component .recipes-container .recipe-container .card .expanded {
+  transform: rotate(180deg);
+}
+.recipe-component .recipes-container .recipe-container .card .unexpanded {
+  transform: rotate(0deg);
+}
+.recipe-component .recipes-container .recipe-container .media {
+  height: 0;
+  padding-top: 56.25%;
+}
+.recipe-component .recipes-container .recipe-container .del-btn {
+  position: absolute;
+  top: -2%;
+  right: 15%;
+}
+.recipe-component .recipes-container .recipe-container .btn-hide {
+  opacity: 0;
+}
+.recipe-component .recipes-container .recipe-container .btn-show {
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+.recipe-component .new-recipe-container {
+  width: 30%;
+  margin: auto;
+}
+.recipe-component .new-recipe-container .panel-details {
+  display: flex;
+  flex-direction: column;
+  margin: -10px 20px 20px 20px;
+}
+.recipe-component .new-recipe-container .panel-details > div {
+  margin: 10px 0;
+}
+.recipe-component .new-recipe-container .panel-details > div:last-child {
+  margin: 0 0 -20px;
+}
+.recipe-component .new-recipe-container .panel-details > div > div {
+  width: 100%;
+}
+.recipe-component .new-recipe-container .panel-details .chips-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.recipe-component .new-recipe-container .panel-details .chips-container .chips {
+  min-width: 60px;
+  margin: 5px 3px 0;
+}
+.recipe-component .new-recipe-container .panel-details > p {
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+.recipe-component .new-recipe-container .panel-details .btn-group {
+  text-align: right;
+  margin: 10px 0;
+}
+.recipe-component .new-recipe-container .panel-details .submit-btn {
+  text-align: center;
+}
+.recipe-component .new-recipe-container .panel-details .ing-container p {
+  margin: 5px 0 -10px;
+}
+.recipe-component .new-recipe-container .panel-details .ing-container .ing-list {
+  list-style: none;
+}
+.recipe-component .new-recipe-container .panel-details .ing-container .ing-list span {
+  margin-left: -2em;
+  margin-right: 1em;
+}
+.recipe-component .new-recipe-container .panel-details .ing-container .ing-list li {
+  display: inline-block;
+  width: 95%;
+  margin-top: 5px;
+}
+.recipe-component .new-recipe-container .panel-details .ing-container .ing-list li > * {
+  width: 100%;
+}
+.recipe-component .edit-btn {
+  float: right;
 }
 
 /*# sourceMappingURL=main.css.map */

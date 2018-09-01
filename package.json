@@ -1,8 +1,10 @@
 {
   "name": "react_demo",
-  "version": "1.0.0",
+  "version": "1.5.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.0.1",
+    "@material-ui/icons": "^3.0.1",
     "axios": "^0.18.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
