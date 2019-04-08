@@ -5,41 +5,44 @@ import EmailPage from './Components/Email';
 import GithubPage from './Components/GitHub';
 import VoterPage from './Components/VoterPage';
 import RecipePage from './Components/Recipe';
+import AppBar from '@material-ui/core/AppBar';
 
 export default class App extends Component {
   render() {
     return (
       <Router>
         <div className="home">
-          <nav>
-            <ul>
-              <li>
-                <Link to="/tag" className="link">
-                  Tag
-                </Link>
-              </li>
-              <li>
-                <Link to="/github" className="link">
-                  GitHub
-                </Link>
-              </li>
-              <li>
-                <Link to="/email" className="link">
-                  Email
-                </Link>
-              </li>
-              <li>
-                <Link to="/voter" className="link">
-                  Voter
-                </Link>
-              </li>
-              <li>
-                <Link to="/recipe" className="link">
-                  Recipe
-                </Link>
-              </li>
-            </ul>
-          </nav>
+          <AppBar position="static" color="default">
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/tag" className="link">
+                    Tag
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/github" className="link">
+                    GitHub
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/email" className="link">
+                    Email
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/voter" className="link">
+                    Voter
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/recipe" className="link">
+                    Recipe
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </AppBar>
           <section>
             <Switch>
               <Route exact path="/tag" component={TagPage} />

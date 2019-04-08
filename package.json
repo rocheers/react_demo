@@ -23,10 +23,8 @@
     "dev": "concurrently --kill-others-on-fail \"npm run style\" \"npm run start\""
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.6",
     "classnames": "^2.2.6",
     "concurrently": "^4.0.1",
-    "eslint": "^5.16.0",
     "eslint-config-last": "0.0.5",
     "eslint-config-prettier": "3.0.1",
     "eslint-plugin-import": "^2.16.0",
@@ -35,5 +33,11 @@
     "eslint-plugin-react": "7.11.1",
     "prettier": "1.14.2",
     "sass": "^1.17.4"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

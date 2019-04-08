@@ -53,3 +53,16 @@ th, td {
 a:hover {
   cursor: pointer;
 }
+
+.avatar-small {
+  width: 50px;
+  height: 50px;
+}
+
+.name-anchor {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  cursor: pointer;
+}

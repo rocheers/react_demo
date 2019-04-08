@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 
-const List = props => {
-  const imageStyle = { width: 50, height: 50 };
+const List = ({ id, idx, login, avatar_url, showOneUser }) => {
   return (
     <tr>
-      <td>{props.id}</td>
+      <td>{id}</td>
       <td>
-        <a onClick={props.showOneUser(props.idx)}>{props.login}</a>
+        <button className="name-anchor" onClick={showOneUser(idx)}>
+          {login}
+        </button>
       </td>
 
       <td>
-        <img style={imageStyle} src={props.avatar_url} alt={props.avatar_url} />
+        <img className="avatar-small" src={avatar_url} alt={avatar_url} />
       </td>
     </tr>
   );
