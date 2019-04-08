@@ -1,16 +1,17 @@
 {
   "name": "react_demo",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^3.1.1",
+    "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.1",
     "axios": "^0.18.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "benchmark": "^2.1.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "^2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,14 +26,14 @@
     "babel-eslint": "^8.2.6",
     "classnames": "^2.2.6",
     "concurrently": "^4.0.1",
-    "eslint": "5.4.0",
+    "eslint": "^5.16.0",
     "eslint-config-last": "0.0.5",
     "eslint-config-prettier": "3.0.1",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-prettier": "2.6.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^2.7.0",
     "eslint-plugin-react": "7.11.1",
     "prettier": "1.14.2",
-    "sass": "^1.14.0"
+    "sass": "^1.17.4"
   }
 }
