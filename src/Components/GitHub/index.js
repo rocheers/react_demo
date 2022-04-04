@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './style.css';
 import axios from 'axios';
 
 const List = ({ id, idx, login, avatar_url, showOneUser }) => {
